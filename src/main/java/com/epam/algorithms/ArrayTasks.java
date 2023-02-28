@@ -8,8 +8,8 @@ package com.epam.algorithms;
 public class ArrayTasks {
 
     String[] seasons = {"winter","spring","summer","autumn"};
-    int sumNumbersFromArr = 0;
     String [] reverseForMethod = {};
+
 
     /**
      * Return a String[] array that will list all the seasons of the year, starting with winter.
@@ -27,12 +27,13 @@ public class ArrayTasks {
      * length = 1  -> [1] length = 3  -> [1, 2, 3] length = 5  -> [1, 2, 3, 4, 5]
      */
     public int[] generateNumbers(int length) {
+        int [] forGenerateNumbers = new int[length];
         if (length > 0) {
-            for (int i = 1; i <= length; i++) {
-
+            for (int i = 0; i <= forGenerateNumbers.length - 1; i++) {
+                forGenerateNumbers[i] = i + 1;
             }
         }
-        return new int[]{length};
+        return forGenerateNumbers;
     }
 
     /**
@@ -59,13 +60,15 @@ public class ArrayTasks {
      * arr = [99, -7, 102], number = -7    ->   2 arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
-        for (int i = 0; i <= arr.length; i++) {
+        for(int i = 0; i < arr.length; i++) {
             if (arr[i] == number) {
-                return arr[i];
+                return i;
             }
         }
         return -1;
     }
+
+
 
     /**
      * Return the new String[] array obtained from the arr array by reversing the order of the elements.
@@ -76,11 +79,7 @@ public class ArrayTasks {
      * "pineapple"]
      */
     public String[] reverseArray(String[] arr) {
-        for (int i = arr.length -1; i >= 0; i--) {
-            reverseForMethod[i] = arr[i];
-            return new String[]{reverseForMethod[i]};
-        }
-        return reverseForMethod;
+        return new String[]{"asd"};
     }
 
     /**
@@ -109,3 +108,4 @@ public class ArrayTasks {
     }
 
 }
+

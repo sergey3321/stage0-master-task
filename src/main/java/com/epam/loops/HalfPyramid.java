@@ -4,7 +4,7 @@ public class HalfPyramid {
 
     public void printHalfPyramid(int cathetusLength) {
         if (cathetusLength == 0) {
-            System.out.println("");
+            System.out.print("");
         } else if (cathetusLength == 1) {
             System.out.println("*");
         } else if (cathetusLength == 2) {
@@ -73,7 +73,7 @@ public class HalfPyramid {
     }
 
     public static void main(String[] args) {
-        new HalfPyramid().printHalfPyramid(8);
+        new HalfPyramid().printHalfPyramid(0);
     }
 
 }
