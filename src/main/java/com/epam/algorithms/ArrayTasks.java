@@ -8,8 +8,6 @@ package com.epam.algorithms;
 public class ArrayTasks {
 
     String[] seasons = {"winter","spring","summer","autumn"};
-    String [] reverseForMethod = {};
-
 
     /**
      * Return a String[] array that will list all the seasons of the year, starting with winter.
@@ -78,9 +76,18 @@ public class ArrayTasks {
      * arr = ["Bob", "Nick"]               -> ["Nick", "Bob"] arr = ["pineapple", "apple", "pen"] -> ["pen", "apple",
      * "pineapple"]
      */
-    public String[] reverseArray(String[] arr) {
-        return new String[]{"asd"};
+    public static String[] reverseArray(String[] arr) {
+
+        String [] reverseArray = new String[arr.length];
+        int arrLength = arr.length - 1;
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+            reverseArray[arrLength - i] = arr[i];
+        }
+
+        return reverseArray;
     }
+
 
     /**
      * Return new int[] array obtained from arr int[] array by choosing positive numbers only. P.S. 0 is not a positive
@@ -88,10 +95,26 @@ public class ArrayTasks {
      * <p>
      * Example:
      * <p>
-     * arr = [1,-2, 3]      -> [1, 3] arr = [-1, -2, -3]   -> [] arr = [1, 2]         -> [1, 2]
+     * arr = [1,-2, 3]      -> [1, 3]  arr = [-1, -2, -3]   -> [] arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
-        return null;
+
+        int positiveNumber = 0;
+
+        for (int elem : arr) {
+            if (elem > 0) {
+                positiveNumber++;
+            }
+        }
+
+        int[] allPositiveNumbers = new int[positiveNumber];
+        positiveNumber = 0;
+        for (int elem : arr) {
+            if (elem > 0) {
+                allPositiveNumbers[positiveNumber++] = elem;
+            }
+        }
+        return allPositiveNumbers;
     }
 
     /**
@@ -105,6 +128,9 @@ public class ArrayTasks {
      */
     public int[][] sortRaggedArray(int[][] arr) {
         return null;
+    }
+    public static void main(String[] args) {
+
     }
 
 }
